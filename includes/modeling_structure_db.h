@@ -6,7 +6,7 @@
 /*   By: kdhrif <kdhrif@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:50:54 by kdhrif            #+#    #+#             */
-/*   Updated: 2023/02/13 16:38:14 by kdhrif           ###   ########.fr       */
+/*   Updated: 2023/02/13 17:10:16 by kdhrif           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ typedef enum e_types
 	ENUM,
 	PRIMITIVE
 }			t_types;
+
+#define OFFSETOF(struct_name, fld_name) \
+	(unsigned int)&(((struct_name *)0)->fld_name)
+#define FIELDSIZE(struct_name, fld_name) \
+	sizeof(((struct_name *)0)->fld_name)
 
 typedef struct s_struct_db_rec_	t_struct_db_rec;
 typedef struct s_fied_info_		t_field_info;
