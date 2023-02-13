@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   example_emp.h                                      :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdhrif <kdhrif@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 14:05:12 by kdhrif            #+#    #+#             */
-/*   Updated: 2023/02/13 20:54:17 by kdhrif           ###   ########.fr       */
+/*   Created: 2023/02/13 20:21:20 by kdhrif            #+#    #+#             */
+/*   Updated: 2023/02/13 21:14:41 by kdhrif           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EXAMPLE_EMP_H
-# define EXAMPLE_EMP_H
+#include "../includes/modeling_structure_db.h"
+#include "../includes/example_emp.h"
 
-typedef struct s_emp_		t_emp;
-typedef struct s_student_	t_student;
-
-struct s_student_ 
+int main(int argc, char **argv)
 {
-	char stud_name[32];
-	unsigned int rollno;
-	unsigned int age;
-	float aggregate;
-	struct student_ *best_colleague;
-};
+	t_struct_db *struct_db = NULL;
 
-struct s_emp_
-{
-	char			emp_name[30];
-	unsigned int	emp_id;
-	unsigned int	age;
-	t_emp			*next;
-	float			salary;
-};
+	struct_db = calloc(1, sizeof(t_struct_db));
 
-#endif
+	static t_field_info emp_fields;
+	field_info(&emp_fields);
+	
+	return 0;
+}

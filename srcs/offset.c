@@ -6,7 +6,7 @@
 /*   By: kdhrif <kdhrif@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:10:59 by kdhrif            #+#    #+#             */
-/*   Updated: 2023/02/13 17:18:24 by kdhrif           ###   ########.fr       */
+/*   Updated: 2023/02/13 18:42:46 by kdhrif           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,8 @@ unsigned int offset_of_2(const void *ptr, const char *fld_name)
 	const char *field = (const char *)&base[ft_strlen((char *)fld_name)];
 	return ((unsigned int) (field - base));
 }
+
+/* unsigned int offsetof_function(struct struct_name *ptr, const char *fld_name) { */
+/*     struct struct_name *null_ptr = (struct struct_name *) 0; */
+/*     return (unsigned int) &(null_ptr->fld_name) - (unsigned int) ptr; */
+/* } */
